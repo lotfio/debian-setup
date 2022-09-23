@@ -11,3 +11,6 @@ source scripts/nginx.sh
 
 # php
 source scripts/security.sh
+
+# clean
+apt -y autoremove
