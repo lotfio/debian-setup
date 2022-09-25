@@ -13,4 +13,5 @@ apt -y install wget curl whois vim git unzip telnet sysstat screenfetch htop
 
 # enable systat
 sed -i 's/ENABLED="false"/ENABLED="true"/g' /etc/default/sysstat
+service sysstat start
 

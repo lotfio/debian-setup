@@ -14,3 +14,5 @@ source scripts/security.sh
 
 # clean
 apt -y autoremove
+
+reboot
