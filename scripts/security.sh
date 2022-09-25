@@ -9,4 +9,4 @@ ufw default deny incoming
 ufw allow 2214
 ufw allow https
 echo "y" | ufw enable
-service ufw start
+systemctl start ufw

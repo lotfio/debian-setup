@@ -10,7 +10,7 @@ source scripts/security.sh
 source scripts/nginx.sh
 
 # php
-source scripts/security.sh
+source scripts/php.sh
 
 # clean
 apt -y autoremove
