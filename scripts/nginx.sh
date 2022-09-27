@@ -12,5 +12,12 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 apt -y update
 apt -y install nginx
 
+# update nginx config file
+sed -i 's/user  nginx/user  www-data/g' /etc/nginx/nginx.conf
+mkdir /var/www && chown -R www-data:www-data /var/www
+
 # start nginx
 systemctl start nginx
+
+# install certbot
+apt -y install certbot python3-certbot-nginx

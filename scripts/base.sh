@@ -5,7 +5,7 @@ apt -y upgrade
 apt -y install sudo
 user=""
 pass=""
-/usr/sbin/useradd -p $(openssl passwd -crypt $pass) -m $user
+/usr/sbin/useradd -p $(openssl passwd -crypt $pass) -m $user -s /bin/bash
 echo "$user    ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/$user
 
 # install some usful tools
@@ -15,3 +15,7 @@ apt -y install wget curl whois vim git unzip telnet sysstat screenfetch htop
 sed -i 's/ENABLED="false"/ENABLED="true"/g' /etc/default/sysstat
 systemctl start sysstat
 
+# change welcome logo
+rm /etc/motd
+cp ./stubs/motd /etc/motd
+sed -i 's/#PrintLastLog yes/PrintLastLog no/g' /etc/ssh/sshd_config
