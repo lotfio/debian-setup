@@ -12,6 +12,9 @@ source scripts/nginx.sh
 # php
 source scripts/php.sh
 
+# fail2ban
+source scripts/fail2ban.sh
+
 # clean
 apt -y autoremove
 
