@@ -1,5 +1,8 @@
 #!/bin/bash 
 
+# env variables
+source scripts/env.sh
+
 # basic
 source scripts/base.sh
 

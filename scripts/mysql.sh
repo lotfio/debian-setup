@@ -10,9 +10,6 @@ echo 'deb [signed-by=/usr/share/keyrings/mysql.gpg] http://repo.mysql.com/apt/de
 # install mysql 8
 apt-get -y update
 
-# password
-MYSQL_ROOT_PASSWORD='123456789@@@'
-
 # Install MySQL
 echo debconf mysql-server/root_password password $MYSQL_ROOT_PASSWORD | debconf-set-selections
 echo debconf mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD | debconf-set-selections
