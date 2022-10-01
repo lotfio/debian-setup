@@ -1,4 +1,6 @@
 # install fail2ban
+if ! command -v fail2ban
+then
 apt install fail2ban
 
 # copy ban rules
@@ -11,3 +13,4 @@ systemctl enable fail2ban
 
 # to unban all    : fail2ban-client unban --all 
 # to check status : fail2ban-client status (jail)
+fi

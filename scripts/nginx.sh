@@ -1,4 +1,6 @@
 # nginx GPG
+if ! command -v nginx
+then
 wget -O- https://nginx.org/keys/nginx_signing.key | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nginx-archive-keyring.gpg
 
 # add ppa repo
@@ -21,3 +23,4 @@ systemctl start nginx
 
 # install certbot
 apt -y install certbot python3-certbot-nginx
+fi

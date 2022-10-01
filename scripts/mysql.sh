@@ -1,4 +1,6 @@
 # non interactive
+if ! command -v mysql
+then
 export DEBIAN_FRONTEND=noninteractive
 
 # mysql GPG
@@ -58,3 +60,4 @@ rm -v ~/secure_our_mysql.sh # Remove the generated Expect script
 mysql --execute "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY $MYSQL_ROOT_PASSWORD;"
 
 echo "MySQL setup completed. Insecure defaults are gone. Please remove this script manually when you are done with it (or at least remove the MySQL root password that you put inside it."
+fi
