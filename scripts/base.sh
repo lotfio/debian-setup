@@ -1,6 +1,9 @@
 apt -y update
 apt -y upgrade
 
+# add essencial variables
+PATH=/usr/sbin/:$PATH
+
 # install sudo and add user
 if ! command -v sudo
 then
