@@ -14,8 +14,15 @@ apt -y update
 apt -y install nginx
 
 # update nginx config file
-sed -i 's/user  nginx/user  www-data/g' /etc/nginx/nginx.conf
-mkdir /var/www && chown -R www-data:www-data /var/www
+wget https://github.com/h5bp/server-configs-nginx/archive/refs/tags/4.2.0.tar.gz
+
+tar -xf 4.2.0.tar.gz && cd server-configs-nginx-4.2.0
+
+rm LICENSE.txt CHANGELOG.md README.md &&cp -rf * /etc/nginx/
+
+rm -rf server-configs-nginx-4.2.0 && rm 4.2.0.tar.gz
+
+mkdir /var/www && touch index.php && chown -R www-data:www-data /var/www
 
 # start nginx
 systemctl start nginx

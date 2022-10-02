@@ -1,7 +1,7 @@
 # install fail2ban
 if ! command -v fail2ban
 then
-apt install fail2ban
+apt-get -y install fail2ban
 
 # copy ban rules
 rm -r /etc/fail2ban/jail.d/*

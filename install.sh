@@ -18,7 +18,10 @@ source scripts/php.sh
 # fail2ban
 source scripts/fail2ban.sh
 
+# mysql
+source scripts/mysql.sh
+
 # clean
 apt -y autoremove
 
-reboot
+systemctl reboot
