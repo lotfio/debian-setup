@@ -24,6 +24,8 @@ rm -rf server-configs-nginx-4.2.0 && rm 4.2.0.tar.gz
 
 mkdir /var/www && touch index.php && chown -R www-data:www-data /var/www
 
+echo "<?=phpinfo()?>" >> /var/www/index.php
+
 # start nginx
 systemctl start nginx
 
