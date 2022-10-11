@@ -15,7 +15,7 @@ fi
 # install some usful tools
 if ! command -v wget
 then
-apt -y install wget curl whois vim git unzip telnet sysstat screenfetch htop
+apt -y install wget curl whois vim git unzip telnet sysstat screenfetch htop lsb-release
 
 # enable systat
 sed -i 's/ENABLED="false"/ENABLED="true"/g' /etc/default/sysstat

@@ -6,7 +6,7 @@ then
 curl -O https://nginx.org/keys/nginx_signing.key && apt-key add ./nginx_signing.key
 
 # add ppa repo
-echo "deb http://nginx.org/packages/debian $(lsb_release -cs) nginx" | sudo tee /etc/apt/sources.list.d/nginx-stable.list
+echo "deb http://nginx.org/packages/debian $(lsb_release -cs) nginx" | tee /etc/apt/sources.list.d/nginx-stable.list
 
 
 # update & install nginx
