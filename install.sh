@@ -6,9 +6,6 @@ source scripts/env.sh
 # basic
 source scripts/base.sh
 
-# security
-source scripts/security.sh
-
 # nginx
 source scripts/nginx.sh
 
@@ -20,6 +17,9 @@ source scripts/fail2ban.sh
 
 # mysql
 source scripts/mysql.sh
+
+# security
+source scripts/security.sh
 
 # clean
 apt -y autoremove
