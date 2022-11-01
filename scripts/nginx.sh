@@ -10,8 +10,8 @@ echo "deb http://nginx.org/packages/debian $(lsb_release -cs) nginx" | tee /etc/
 
 
 # update & install nginx
-apt -y update
-apt -y install nginx
+apt-get -y update
+apt-get -y install nginx
 
 # update nginx config file
 wget https://github.com/h5bp/server-configs-nginx/archive/refs/tags/4.2.0.tar.gz
@@ -30,5 +30,5 @@ echo "<?=phpinfo()?>" >> /var/www/index.php
 systemctl start nginx
 
 # install certbot
-apt -y install certbot python3-certbot-nginx
+apt-get -y install certbot python3-certbot-nginx
 fi

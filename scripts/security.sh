@@ -6,7 +6,7 @@ sed -i "s/PermitRootLogin yes/PermitRootLogin no/g" /etc/ssh/sshd_config
 service ssh restart
 
 # ufw firewall
-apt -y install ufw
+apt-get -y install ufw
 
 ufw default deny incoming
 ufw allow $SSH_PORT

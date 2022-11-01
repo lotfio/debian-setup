@@ -22,6 +22,6 @@ source scripts/mysql.sh
 source scripts/security.sh
 
 # clean
-apt -y autoremove
+apt-get -y autoremove
 
 systemctl reboot
