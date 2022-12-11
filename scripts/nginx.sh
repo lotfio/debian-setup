@@ -22,6 +22,10 @@ rm LICENSE.txt CHANGELOG.md README.md &&cp -rf * /etc/nginx/
 
 rm -rf server-configs-nginx-4.2.0 && rm 4.2.0.tar.gz
 
+cp ./stubs/nginx/php-fpm.conf /etc/nginx
+
+cp ./stubs/nginx/example-host.com /etc/nginx/conf.d
+
 mkdir /var/www && touch index.php && chown -R www-data:www-data /var/www
 
 echo "<?=phpinfo()?>" >> /var/www/index.php
