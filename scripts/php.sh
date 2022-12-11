@@ -1,7 +1,6 @@
 # requirements for php
 if ! command -v php
 then
-apt-get install -y lsb-release ca-certificates apt-transport-https software-properties-common gnupg2
 
 # add ppa repo
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/sury-php.list
